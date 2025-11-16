@@ -146,3 +146,7 @@ document.getElementById('clear-btn').addEventListener('click',function(){
 
     historContainer.innerText=''
 })
+
+
+
+// Only first three card is implemented all features. Ignoring repeatitive task
