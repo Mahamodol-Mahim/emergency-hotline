@@ -140,3 +140,9 @@ document.getElementById('fire-btn')
 
 
 
+// clear button
+document.getElementById('clear-btn').addEventListener('click',function(){
+    document.getElementById('history-list').style.display='none';
+
+    historContainer.innerText=''
+})
