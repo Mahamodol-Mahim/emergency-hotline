@@ -8,25 +8,33 @@ for (const card of cards) {
     });
 }
 
-//copy button feature
-const copyBtns=document.getElementsByClassName('copy-card')
-for(const copyBtn of copyBtns){
-    copyBtn.addEventListener('click',function(){
 
-        const userConfirmed=confirm("Do you want to copy?");
+// function to copy the number
+function copyButtonFunc(id1,id2){
+    document.getElementById(id1).addEventListener('click',function(){
+    const number=parseInt(document.getElementById(id2).innerText)
+    const userConfirmed=confirm(`Do you want to copy the number ${number}`);
         if(userConfirmed){
+            navigator.clipboard.writeText(number);
             const copyIconValue=parseInt(document.getElementById('copy-nav').innerText)
             const newCopyIconValue=copyIconValue+1;
             document.getElementById('copy-nav').innerText=newCopyIconValue
+            
         }
         else{
             console.log('Copy Canceled')
         }
-    })
+})
 }
 
+copyButtonFunc('emergency-copy-btn','emergencyNumId')
+copyButtonFunc('police-copy-btn','policeNumId')
+copyButtonFunc('fire-copy-btn','fireNumId')
 
-// call button feature
+
+
+//fire three cards call button feature
+
 // national emergency call button
 document.getElementById('national-btn')
 .addEventListener('click',function(){
