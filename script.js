@@ -18,10 +18,125 @@ for(const copyBtn of copyBtns){
             const copyIconValue=parseInt(document.getElementById('copy-nav').innerText)
             const newCopyIconValue=copyIconValue+1;
             document.getElementById('copy-nav').innerText=newCopyIconValue
-            console.log(newCopyIconValue)
         }
         else{
             console.log('Copy Canceled')
         }
     })
 }
+
+
+// call button feature
+// national emergency call button
+document.getElementById('national-btn')
+.addEventListener('click',function(){
+    const starValue=parseInt(document.getElementById('star-nav').innerText)
+    if(starValue>=20){
+        const newStarValue=starValue-20;
+        document.getElementById('star-nav').innerText=newStarValue;
+        console.log(newStarValue)
+
+        const emergencyNumber=document.getElementById('emergencyNumId').innerText;
+
+        const historContainer=document.getElementById('history-list')
+        
+        // historContainer.innerText=''
+
+        let time = new Date().toLocaleTimeString();
+        const div=document.createElement('div')
+        div.innerHTML=`
+                    <div class="rounded-[8px] bg-[#FAFAFA] my-2 flex justify-between items-center">
+                        <div class="">
+                            <p class="font-semibold">National Emergency Number</p>
+                            <p class="text-[#5C5C5C]">${emergencyNumber}</p>
+                        </div>
+                        <div>
+                            ${time}
+                        </div>
+                    </div>    
+                `
+        historContainer.appendChild(div)
+    }
+    else{
+        alert('Points is not availabe!')
+    }
+})
+
+
+// police helpline call button
+document.getElementById('police-btn')
+.addEventListener('click',function(){
+    const starValue=parseInt(document.getElementById('star-nav').innerText)
+    if(starValue>=20){
+        const newStarValue=starValue-20;
+        document.getElementById('star-nav').innerText=newStarValue;
+        console.log(newStarValue)
+
+        const emergencyNumber=document.getElementById('policeNumId').innerText;
+
+        const historContainer=document.getElementById('history-list')
+        
+        // historContainer.innerText=''
+
+        let time = new Date().toLocaleTimeString();
+        const div=document.createElement('div')
+        div.innerHTML=`
+                    <div class="rounded-[8px] bg-[#FAFAFA] my-2 flex justify-between items-center">
+                        <div class="">
+                            <p class="font-semibold">Police Helpline Number</p>
+                            <p class="text-[#5C5C5C]">${emergencyNumber}</p>
+                        </div>
+                        <div>
+                            ${time}
+                        </div>
+                    </div>    
+                `
+        historContainer.appendChild(div)
+    }
+    else{
+        alert('Points is not availabe!')
+    }
+})
+
+
+// fire service call button
+const historContainer=document.getElementById('history-list')        
+document.getElementById('fire-btn')
+.addEventListener('click',function(){
+
+    document.getElementById('history-list').style.display='block'   // this is because when clearing(clear-btn) history-list is none
+
+    const starValue=parseInt(document.getElementById('star-nav').innerText)
+    if(starValue>=20){
+        const newStarValue=starValue-20;
+        document.getElementById('star-nav').innerText=newStarValue;
+        console.log(newStarValue)
+
+        const emergencyNumber=document.getElementById('fireNumId').innerText;
+
+        // const historContainer=document.getElementById('history-list')
+        
+        // historContainer.innerText=''
+
+        let time = new Date().toLocaleTimeString();
+        const div=document.createElement('div')
+        div.innerHTML=`
+                    <div class="rounded-[8px] bg-[#FAFAFA] my-2 flex justify-between items-center">
+                        <div class="">
+                            <p class="font-semibold">Fire Service Number</p>
+                            <p class="text-[#5C5C5C]">${emergencyNumber}</p>
+                        </div>
+                        <div>
+                            ${time}
+                        </div>
+                    </div>    
+                `
+                historContainer.appendChild(div)
+    }
+    else{
+        alert('Points is not availabe!')
+    }
+})
+
+
+

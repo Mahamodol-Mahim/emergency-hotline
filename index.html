@@ -25,7 +25,7 @@
                 <img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="">
             </div>
             <div class="w-[125px] h-[50px] rounded-[50px] bg-[rgba(65,255,107,0.1)] p-3 flex justify-center items-center gap-2">
-                <span class="font-bold">100</span>
+                <span id="star-nav" class="font-bold">100</span>
                 <img class="w-[30px] h-[30px]" src="./assets/coin.png" alt="">
             </div>
             <div class="w-[125px] h-[50px] rounded-[50px] bg-[rgba(0,166,62,1)] p-3 flex justify-center items-center gap-2">
@@ -51,11 +51,11 @@
             </div>
             <p class="font-bold text-[18px]">National Emergency Number</p>
             <p class="text-[12px]">National Emergency</p>
-            <p class="font-bold text-[25px]">999</p>
+            <p id="emergencyNumId" class="font-bold text-[25px]">999</p>
             <div class="w-[40px] h-[25px] rounded-3xl bg-[#F2F2F2] text-[12px] text-center my-2 p-0.5">All</div>
             <div class="flex justify-between">
                 <button class="copy-card w-[110px] h-[40px] rounded-[8px] text-[#5C5C5C] border-2 border-[#5C5C5C]-100 hover:bg-black hover:text-white"><i class="fa-regular fa-copy mr-1"></i>Copy</button>
-                <button class="bg-[rgba(0,166,62,1)] w-[110px] h-[40px] rounded-[8px] text-white hover:bg-[#5C5C5C] hover:text-white"><i class="fa-solid fa-phone mr-1"></i>Call</button>
+                <button id="national-btn" class="bg-[rgba(0,166,62,1)] w-[110px] h-[40px] rounded-[8px] text-white hover:bg-[#5C5C5C] hover:text-white"><i class="fa-solid fa-phone mr-1"></i>Call</button>
             </div>
         </div>
 
@@ -67,11 +67,11 @@
             </div>
             <p class="font-bold text-[18px]">Police Helpline Number</p>
             <p class="text-[12px]">Police</p>
-            <p class="font-bold text-[25px]">999</p>
+            <p id="policeNumId" class="font-bold text-[25px]">99900</p>
             <div class="w-[40px] h-[25px] rounded-3xl bg-[#F2F2F2] text-[12px] text-center my-2 p-0.5">Police</div>
             <div class="flex justify-between">
                 <button class="copy-card w-[110px] h-[40px] rounded-[8px] text-[#5C5C5C] border-2 border-[#5C5C5C]-100 hover:bg-black hover:text-white "><i class="fa-regular fa-copy mr-1"></i>Copy</button>
-                <button class="bg-[rgba(0,166,62,1)] w-[110px] h-[40px] rounded-[8px] text-white hover:bg-[#5C5C5C] hover:text-white "><i class="fa-solid fa-phone mr-1"></i>Call</button>
+                <button id="police-btn" class="bg-[rgba(0,166,62,1)] w-[110px] h-[40px] rounded-[8px] text-white hover:bg-[#5C5C5C] hover:text-white "><i class="fa-solid fa-phone mr-1"></i>Call</button>
             </div>
         </div>
 
@@ -82,11 +82,11 @@
             </div>
             <p class="font-bold text-[18px]">Fire Service Number</p>
             <p class="text-[12px]">Fire Service</p>
-            <p class="font-bold text-[25px]">111999</p>
+            <p id="fireNumId" class="font-bold text-[25px]">111999</p>
             <div class="w-[40px] h-[25px] rounded-3xl bg-[#F2F2F2] text-[12px] text-center my-2 p-0.5">Fire</div>
             <div class="flex justify-between">
                 <button class="copy-card w-[110px] h-[40px] rounded-[8px] text-[#5C5C5C] border-2 border-[#5C5C5C]-100 hover:bg-black hover:text-white "><i class="fa-regular fa-copy mr-1"></i>Copy</button>
-                <button class="bg-[rgba(0,166,62,1)] w-[110px] h-[40px] rounded-[8px] text-white hover:bg-[#5C5C5C] hover:text-white "><i class="fa-solid fa-phone mr-1"></i>Call</button>
+                <button id="fire-btn" class="bg-[rgba(0,166,62,1)] w-[110px] h-[40px] rounded-[8px] text-white hover:bg-[#5C5C5C] hover:text-white "><i class="fa-solid fa-phone mr-1"></i>Call</button>
             </div>
         </div>
 
@@ -96,18 +96,12 @@
                     <i class="fa-regular fa-clock mr-2"></i>
                     <p>Call History</p>
                 </div>
-                <div class="w-[125px] h-[50px] rounded-[50px] bg-[rgba(0,166,62,1)] p-3 flex justify-center items-center gap-2 hover:bg-[#5C5C5C] hover:text-white">
+                <div id="clear-btn" class="w-[125px] h-[50px] rounded-[50px] bg-[rgba(0,166,62,1)] p-3 flex justify-center items-center gap-2 hover:bg-[#5C5C5C] hover:text-white">
                     <p class="font-bold text-white">Clear</p>
                 </div>
             </div>
-            <div class="mt-3 p-3 flex justify-between items-center">
-                <div class="rounded-[8px] bg-[#FAFAFA] my-2">
-                    <p class="font-semibold">Fire Service Number</p>
-                    <p class="text-[#5C5C5C]">111999</p>
-                </div>
-                <div>
-                    date
-                </div>
+            <div id="history-list" class="mt-3 p-3 ">
+                
             </div>
         </div>
 
